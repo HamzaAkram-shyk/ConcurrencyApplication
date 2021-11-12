@@ -29,12 +29,6 @@ class MainActivity : AppCompatActivity() {
             name.text = "Hello its databinding. ......."
         }
 
-//        binding.addBtn.setOnClickListener {
-//            viewModel.updateScore(10)
-//        }
-//        viewModel.scoreObserve.observe(this, Observer { num ->
-//            binding.name.text = "$num"
-//        })
         viewModel.textObserve.observe(this, Observer {
             Toast.makeText(this, "change = $it", Toast.LENGTH_SHORT).show()
         })
